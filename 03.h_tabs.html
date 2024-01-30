@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+  </head>
+  <style>
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+    }
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    .tab button.active {
+      background-color: #ccc;
+    }
+    .tabcontent {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Bengaluru')">
+        Bengaluru
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+      <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div>
+    <div class="tabcontent" id="Bengaluru">
+      <h3>Bengaluru</h3>
+      <p>This is Bengaluru</p>
+    </div>
+    <div class="tabcontent" id="Paris">
+      <h3>Paris</h3>
+      <p>This is Paris</p>
+    </div>
+    <div class="tabcontent" id="Tokyo">
+      <h3>Tokyo</h3>
+      <p>This is Tokyo</p>
+    </div>
+    <script>
+      function openCity(e, city) {
+        let tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        let tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+        }
+        document.getElementById(city).style.display = "block";
+        e.currentTarget.classList.add("active");
+      }
+      document.querySelector(".tablinks").click();
+    </script>
+  </body>
+</html>

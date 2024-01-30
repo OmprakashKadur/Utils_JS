@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .loginContainer {
+        background-color: #ffff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      .loginHeader {
+        text-align: center;
+      }
+      .loginForm {
+        padding: 20px;
+      }
+      .formgroup {
+        padding: 10px 0px;
+      }
+      .formgroup label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .formgroup input {
+        width: 100%;
+        border: 1px solid#ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 8px;
+      }
+      .formgroup button {
+        width: 100%;
+        background-color: #4557f5;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 600px) {
+        .loginContainer {
+          border-radius: 0;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loginContainer">
+      <div class="loginHeader">
+        <h3>Login</h3>
+      </div>
+      <div class="loginForm">
+        <div class="formgroup">
+          <label for="userName"> User Name</label>
+          <input type="text" placeholder="User Name" />
+        </div>
+        <div class="formgroup">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="formgroup">
+          <button type="submit">Login</button>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
